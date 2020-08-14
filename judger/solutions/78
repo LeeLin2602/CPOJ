@@ -1,0 +1,17 @@
+import java.util.*;
+
+class P5 {
+    static long[] fbi = new long[1000000];
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        a = (int) Math.pow(2, a);
+        fbi[0] = 1;
+        fbi[1] = 1;
+        for(int i = 2; i <=a; i++) {
+            fbi[i] = (fbi[i - 2] + fbi[i - 1]) % 1000000007;
+        }
+        System.out.println(fbi[a-1]);
+    }
+}

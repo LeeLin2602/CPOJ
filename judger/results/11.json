@@ -1,0 +1,1 @@
+{"Subproblems": [], "status": 9, "Discription": "/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o: In function `_start':\n(.text+0x20): undefined reference to `main'\ncollect2: error: ld returned 1 exit status\n"}

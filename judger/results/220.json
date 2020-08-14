@@ -1,0 +1,1 @@
+{"Subproblems": [], "status": 9, "Description": "/P9.c:1:10: fatal error: bits/stdc++.h: No such file or directory\n #include <bits/stdc++.h>\n          ^~~~~~~~~~~~~~~\ncompilation terminated.\n"}

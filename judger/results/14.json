@@ -1,0 +1,1 @@
+{"Subproblems": [], "status": 9, "Discription": "/var/local/lib/isolate/0/box/P1.c:1:7: error: expected declaration specifiers or \u2018...\u2019 before string constant\n print(\"3\"2123\n       ^~~\n"}

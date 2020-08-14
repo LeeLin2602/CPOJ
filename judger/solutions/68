@@ -1,0 +1,4 @@
+import requests
+m, n = input(), input()
+
+print(m)

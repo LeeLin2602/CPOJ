@@ -1,0 +1,39 @@
+#include<iostream>
+
+using namespace std;
+
+void dfs(int,bool[]);
+
+int sum=0;
+int row,col;
+int main(){
+    cin>>row>>col;
+    if(row*col==0)
+        cout<<'0';
+    else{
+        bool graph[row*col];
+        
+        for(int i=0;i<row*col;i++)
+            graph[i]=0;
+        
+        dfs(row*col-col,graph);
+        
+        cout<<sum;
+    }
+    
+    return 0;
+}
+
+void dfs(int index,bool graph[]){
+    graph[index]=1;
+    if(index==col-1){
+        sum++;
+    }
+    else{
+        if(index-col>=0 && graph[index-col]!=1)            {dfs(index-col,graph);}
+        if(index+col<row*col && graph[index+col]!=1)    {dfs(index+col,graph);}
+        if(index%col && graph[index-1]!=1)                {dfs(index-1,graph);}
+        if(index%col!=col-1 && graph[index+1]!=1)        {dfs(index+1,graph);}
+    }
+    graph[index]=0;
+}

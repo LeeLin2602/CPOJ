@@ -1,0 +1,2 @@
+num = [int(n) for n in input().split()]
+print(num[0]+num[1])

@@ -1,0 +1,19 @@
+a = int(input())
+b = int(input())
+
+sols = 0
+def dfs(i, j, m, n, walked = set()):
+	global sols
+	if i < 0 or j < 0 or i >= m or j >= n or (i, j) in walked:
+		return
+	elif (i, j) == (m - 1, n - 1):
+		sols += 1
+		return
+	walked.add((i, j))
+	dfs(i - 1, j, m, n)
+	dfs(i + 1, j, m, n)
+	dfs(i, j + 1, m, n)
+	dfs(i, j - 1, m, n)
+	walked.remove((i, j))
+dfs(0, 0, a, b)
+print(sols)

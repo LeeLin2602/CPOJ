@@ -1,0 +1,12 @@
+#include<iostream>
+#include<ctime>
+#include<cstdlib>
+using namespace std;
+int main(){
+	int i;
+	cin>>i;
+	int s[i+1];s[0]=0,s[1]=1;
+	for(int j=2;j<=i;j++){
+		s[j]=(s[j-1]+s[j-2]) % 1000000007;
+	}cout<<s[i];
+} 
