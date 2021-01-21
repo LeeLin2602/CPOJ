@@ -10,6 +10,7 @@ $passwd = $_POST["password"];
 
 if(!checkString($email, "/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/")){
 	header("location: /login?status=帳號或密碼錯誤");
+    exit();
 }
 
 $sql = new MySQL();
