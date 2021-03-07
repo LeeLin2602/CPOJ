@@ -1,0 +1,40 @@
+version: '3.3'
+
+services:
+    apache:
+        build: ./apache
+        restart: always
+        container_name: apache
+        ports:
+            - "80:80"
+        depends_on:
+            - mysql
+        volumes:
+            - ./apache/www:/var/www/html
+            - ./data/problems:/var/www/problems
+            - ./data/verdicts:/var/www/verdicts
+            - ./data/submissions:/var/www/submissions
+        networks:
+            docker:
+                ipv4_address: 172.19.0.2
+    mysql:
+        build: ./mysql
+        restart: always
+        container_name: mysql
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./data/db:/var/lib/mysql
+        environment:
+            MYSQL_USER: judge
+            MYSQL_PASSWORD: a84dc85b974
+            MYSQL_ROOT_PASSWORD: 04c0b473be0aa64f57
+        networks:
+            docker:
+                ipv4_address: 172.19.0.3
+
+networks:
+    docker:
+        ipam:
+            config:
+                - subnet: 172.19.0.0/16

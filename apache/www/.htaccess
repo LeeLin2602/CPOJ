@@ -1,0 +1,40 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+    deny from all
+</Files>
+
+Options -Indexes
+
+php_flag display_errors on
+php_value error_reporting -1
+
+# ErrorDocument 400 /404.php
+# ErrorDocument 401 /404.php
+ErrorDocument 404 /404.php
+# ErrorDocument 500 /error.php
+# ErrorDocument 502 /error.php
+# ErrorDocument 504 /error.php
+
+
+RewriteEngine on
+#RewriteCond %{SERVER_PORT} 80 [OR]
+#RewriteCond %{HTTP_HOST} ^cpoj.ddns.net$
+#RewriteRule ^(.*)$ https://cpoj.me/$1 [R]
+#RewriteCond %{HTTP_HOST} ^(www\.)(:80)? [NC]
+##RewriteRule ^(.*) //$1 [R=301]
+
+RewriteRule ^403$ /403.php [NC]
+RewriteRule ^405$ /405.php [NC]
+RewriteRule ^index.html$ / [NC]
+RewriteRule ^newProblem$ /editProblem [NC]
+RewriteRule ^editProblem$ /problems/editProblem.php [NC]
+RewriteRule ^edit$ /problems/edit.php [NC]
+RewriteRule ^showProblem$ /problem.php [NC]
+RewriteRule ^listProblems$ /problemset.php [NC]
+RewriteRule ^submitSolution$ /problems/submit.php [NC]
+RewriteRule ^submit$ /problems/sub.php [NC]
+RewriteRule ^status$ /status.php [NC]
+RewriteRule ^viewResult$ /viewResult.php [NC]
+
+RewriteRule ^register$ /register.php [NC]
+RewriteRule ^login$ /login.php [NC]
+RewriteRule ^private/ /404.php [NC]
