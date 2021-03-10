@@ -1,5 +1,2 @@
 .DS_Store
 *.swp
-data/db/*
-data/verdicts/*
-data/submissions/*
