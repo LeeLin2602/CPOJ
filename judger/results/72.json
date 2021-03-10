@@ -1,1 +1,0 @@
-{"Subproblems": [], "status": 9, "Description": "/P3.java:3: error: class P2 is public, should be declared in a file named P2.java\npublic class P2 {\n       ^\n1 error\n"}

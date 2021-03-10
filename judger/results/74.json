@@ -1,1 +1,0 @@
-{"Subproblems": [], "status": 9, "Description": "/P3.java:23: error: bad operand types for binary operator '%'\n        System.out.println(nn[m - 1][n - 1] % 1000000007);\n                                            ^\n  first type:  BigInteger\n  second type: int\n1 error\n"}

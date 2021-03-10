@@ -1,3 +1,0 @@
-m, n = input(), input()
-
-print(int(m) + int(n))

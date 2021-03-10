@@ -1,1 +1,0 @@
-{"Subproblems": [], "status": 9, "Description": "/P1.cpp:44:12: error: \u2018SIZE\u2019 was not declared in this scope\n bool prime[SIZE + 1];\n            ^~~~\n/P1.cpp:44:12: note: suggested alternative: \u2018FILE\u2019\n bool prime[SIZE + 1];\n            ^~~~\n            FILE\n"}

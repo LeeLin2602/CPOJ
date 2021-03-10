@@ -1,3 +1,0 @@
-a = int(input())
-b = in(input())
-print(a+b)

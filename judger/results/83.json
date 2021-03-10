@@ -1,1 +1,0 @@
-{"Subproblems": [], "status": 9, "Description": "/P5.c:1:1: error: unknown type name \u2018import\u2019; did you mean \u2018short\u2019?\n import os\n ^~~~~~\n short\n/P5.c:2:1: error: expected \u2018=\u2019, \u2018,\u2019, \u2018;\u2019, \u2018asm\u2019 or \u2018__attribute__\u2019 before \u2018n\u2019\n n = input()\n ^\n"}

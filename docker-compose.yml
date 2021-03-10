@@ -17,6 +17,20 @@ services:
         networks:
             docker:
                 ipv4_address: 172.19.0.2
+    judger:
+        build: ./judger
+        restart: always
+        container_name: judger
+        privileged: true
+        depends_on:
+            - mysql
+        volumes:
+            - ./data/problems:/var/www/problems
+            - ./data/verdicts:/var/www/verdicts
+            - ./data/submissions:/var/www/submissions
+        networks:
+            docker:
+                ipv4_address: 172.19.0.4
     mysql:
         build: ./mysql
         restart: always
@@ -32,6 +46,7 @@ services:
         networks:
             docker:
                 ipv4_address: 172.19.0.3
+
 
 networks:
     docker:
