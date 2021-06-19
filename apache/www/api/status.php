@@ -39,7 +39,7 @@ ORDER BY `ID` DESC LIMIT ? OFFSET ?;
 $query->bind_param("dddddd", $uid, $uid, $pid, $pid, $limit, $offset);
 
 $query->execute();
-if($query->errno) respond(500, $msg = "Query failed.\n".($result->error), $data = array());
+if($query->errno) respond(500, $msg = "Query failed.\n".($query->error), $data = array());
 $result = $query->get_result();
 $res = array();
 $cnt = 0;
