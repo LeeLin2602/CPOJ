@@ -83,6 +83,7 @@ echo('
                 /* console.log(response); */
                 this.Name = response["data"]["data"]["Name"];
                 this.ID = response["data"]["data"]["ID"];
+                this.Auth = response["data"]["data"]["auth"];
                 this.self = "/status?id=" + this.ID;
             })
             .catch(error=>{
