@@ -65,7 +65,7 @@
 				else if(item.Status == 0) item.color = "orange";
 				else item.color = "red";
 				item.Status = ["Pending", "Compiling", "AC", "PE", "TLE", "MLE", "WA", "RE", "OLE", "CE", "SE", "NA"][item.Status];
-				item.problemUrl = "/showProblem?id=" + item.ProblemID;
+				if(item.Name==log.Name||item.Auth) item.problemUrl = "/showProblem?id=" + item.ProblemID;
 				app.list.push(item);
 			});
 		})
