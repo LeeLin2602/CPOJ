@@ -11,6 +11,6 @@ docker-compose up
 ---
 todos：
 1. 一個更好的方式來儲存密碼，目前密碼分別存放在 CPOJ/apache/www/private/env.php、CPOJ/judger/judger.py、CPOJ/mysql/db.sql，以及 root 密碼 CPOJ/docker-compose.yml。
-2. judge 的重構，分為 controller 和 worker，可以讓 worker 部署在多台機器上[開發中](https://github.com/LeeLin2602/CPOJ_Judge)。
+2. judge 的重構，分為 controller 和 worker，可以讓 worker 部署在多台機器上，正在[開發中](https://github.com/LeeLin2602/CPOJ_Judge)。
 
 本 Judge 的沙盒程式是使用 [ioi/isolate](https://github.com/ioi/isolate)。
