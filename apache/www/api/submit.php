@@ -40,7 +40,7 @@ if($querySolution->errno) respond(500, $querySolution->error);
 $querySolution->store_result();
 if($querySolution->num_rows) respond(403, "重複上傳");
 
-$updatePStatic = $sql->prepare("UPDATE Accounts SET Submit_Times = Submit_Times + 1 WHERE ID = ?;");
+$updatePStatic = $sql->prepare("UPDATE Problems SET Submit_Times = Submit_Times + 1 WHERE ID = ?;");
 $updatePStatic->bind_param('d', $pid);
 $updatePStatic->execute();
 
