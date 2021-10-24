@@ -3,3 +3,4 @@ data/submissions/*
 data/verdicts/*
 data/db/*
 *.swp
+sftp-config.json
